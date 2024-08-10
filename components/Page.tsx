@@ -1,8 +1,6 @@
 import styles from '../app/styles/page.module.css';
 import Card from './Card';
 import Highlights from './Highlights';
-import PlaceholderImage from '../public/next.svg';
-import Image from 'next/image';
 import ReviewCard from './ReviewCard';
 
 export default function Page() {

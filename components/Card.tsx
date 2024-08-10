@@ -38,6 +38,8 @@ export default function Card({
               marginRight: 100,
               objectFit: 'cover',
               backgroundColor: 'black',
+              boxShadow:
+                'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
             }}
           />
 
@@ -63,6 +65,8 @@ export default function Card({
               marginLeft: 100,
               objectFit: 'cover',
               backgroundColor: 'black',
+              boxShadow:
+                'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
             }}
           />
         </>

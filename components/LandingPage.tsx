@@ -6,7 +6,6 @@ export default function LandingPage() {
   return (
     <div
       style={{
-        // backgroundImage: `url(${BackgroundImage})`,
         height: '90vh',
         display: 'flex',
         flexDirection: 'column',
@@ -32,7 +31,8 @@ export default function LandingPage() {
       <p style={{ textAlign: 'center', width: 300, color: 'white' }}>
         Lorem ipsum dolor sit amet loream ipsum dolor sit amet lorem ipsum.
       </p>
-      <button>Call Now for a Free Quote</button>
+      <div style={{ height: 25 }} />
+      <button style={{ fontSize: 25 }}>Call Now for a Free Quote</button>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import { LittleReviewCard } from '@/components/ReviewCard';
 import styles from '../styles/page.module.css';
+import Image from 'next/image';
 
 import DestinyIcon from '../../public/review-icons/destiny-review.png';
 import CarrieIcon from '../../public/review-icons/carrie-review.png';
@@ -10,6 +11,8 @@ import TomIcon from '../../public/review-icons/tom-review.png';
 import PrentissIcon from '../../public/review-icons/prentiss-review.png';
 import DeannaIcon from '../../public/review-icons/deanna-review.png';
 import TeriIcon from '../../public/review-icons/teri-review.png';
+
+import BackgroundImage from '../../public/general-photos/wilsons-background.jpeg';
 
 export default function page() {
   const imageData = [
@@ -65,14 +68,30 @@ export default function page() {
       <div
         style={{
           height: '50vh',
-          backgroundColor: 'lightgray',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <h1 className={styles.center_text}>Reviews</h1>
+        <Image
+          src={BackgroundImage}
+          alt="Wilson's Emergency Tree Service Background"
+          layout="fill"
+          objectFit="cover"
+          style={{
+            filter: 'brightness(60%)',
+            zIndex: -1,
+            maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 80%, transparent)',
+          }}
+        />
+        <h2
+          className={styles.center_text}
+          style={{ color: 'white', marginTop: 50 }}
+        >
+          Reviews
+        </h2>
+        <p style={{ color: 'white' }}>What folks are saying about us.</p>
       </div>
 
       <div
@@ -85,7 +104,6 @@ export default function page() {
           padding: 50,
 
           display: 'flex',
-          // flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',

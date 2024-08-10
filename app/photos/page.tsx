@@ -1,6 +1,8 @@
 import styles from '../styles/page.module.css';
 import Image from 'next/image';
 
+import BackgroundImage from '../../public/general-photos/wilsons-background.jpeg';
+
 export default function page() {
   const imageData = ['', '', '', '', ''];
 
@@ -9,14 +11,30 @@ export default function page() {
       <div
         style={{
           height: '50vh',
-          backgroundColor: 'lightgray',
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
         }}
       >
-        <h1 className={styles.center_text}>Photos</h1>
+        <Image
+          src={BackgroundImage}
+          alt="Wilson's Emergency Tree Service Background"
+          layout="fill"
+          objectFit="cover"
+          style={{
+            filter: 'brightness(60%)',
+            zIndex: -1,
+            maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 80%, transparent)',
+          }}
+        />
+        <h2
+          className={styles.center_text}
+          style={{ color: 'white', marginTop: 50 }}
+        >
+          Photos
+        </h2>
+        <p style={{ color: 'white' }}>Lorem ipsum dolor sit amet.</p>
       </div>
 
       <div

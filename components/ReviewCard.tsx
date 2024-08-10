@@ -79,7 +79,8 @@ export function LittleReviewCard({
   return (
     <div
       style={{
-        backgroundColor: 'var(--dark-blue)',
+        // backgroundColor: 'var(--light-blue)',
+        backgroundColor: 'white',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',
@@ -89,6 +90,9 @@ export function LittleReviewCard({
         width: 350,
         height: 250,
         margin: 10,
+
+        boxShadow:
+          'rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px',
       }}
     >
       <Image
@@ -105,13 +109,13 @@ export function LittleReviewCard({
       />
 
       <p
-        style={{ paddingTop: 20, color: 'white' }}
+        style={{ paddingTop: 20, color: 'black' }}
         className={styles.center_text}
       >
         "{text}"
       </p>
       <p
-        style={{ color: 'var(--light-blue)', fontSize: 14 }}
+        style={{ color: 'var(--med-blue)', fontSize: 14 }}
         className={styles.center_text}
       >
         ~ {name}

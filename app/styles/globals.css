@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Outage';
+  src: local('Outage'), url(../assets/fonts/Outage.ttf) format('truetype');
+}
+
 :root {
   --red: #b42531;
   --dark-blue: #253452;
@@ -15,18 +20,22 @@ h1 {
   margin: 10px;
   font-size: 75px;
   font-weight: 450;
+  font-family: 'Outage';
 }
 
 h2 {
   margin: 10px;
   font-size: 50px;
   font-weight: 350;
+  font-family: 'Outage';
 }
 
 h3 {
   margin: 10px;
   font-size: 25px;
   font-weight: normal;
+  font-family: 'Outage';
+  color: var(--med-blue);
 }
 
 p {

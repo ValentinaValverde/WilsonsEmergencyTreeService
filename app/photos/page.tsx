@@ -25,7 +25,7 @@ export default function page() {
           backgroundColor: 'white',
           marginLeft: 50,
           marginRight: 50,
-          borderRadius: 25,
+          borderRadius: 10,
           padding: 50,
 
           display: 'flex',
@@ -42,7 +42,7 @@ export default function page() {
               alt={'Gallery Image'}
               width={300}
               height={300}
-              style={{ borderRadius: 25, backgroundColor: 'black', margin: 5 }}
+              style={{ borderRadius: 10, backgroundColor: 'black', margin: 5 }}
               key={i}
             />
           );

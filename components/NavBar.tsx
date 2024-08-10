@@ -1,4 +1,6 @@
 import styles from '../app/styles/page.module.css';
+import Image from 'next/image';
+import Logo from '../public/logo.png';
 
 export default function NavBar() {
   return (
@@ -17,7 +19,9 @@ export default function NavBar() {
           padding: 20,
         }}
       >
-        <p>navbar</p>
+        <a href="/">
+          <Image src={Logo} alt="Logo" width={70} height={60} />
+        </a>
 
         <div
           style={{

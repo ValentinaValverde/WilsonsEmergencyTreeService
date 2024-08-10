@@ -1,7 +1,15 @@
 import styles from '../app/styles/page.module.css';
 import Card from './Card';
 import Highlights from './Highlights';
-import ReviewCard from './ReviewCard';
+import { LittleReviewCard } from './ReviewCard';
+import RemovalImage from '../public/general-photos/wrist.png';
+import PruningImage from '../public/general-photos/prune.png';
+import AssessmentImage from '../public/general-photos/rot.jpg';
+import OwnerImage from '../public/general-photos/saw-dust-smile.png';
+
+import CarrieIcon from '../public/review-icons/carrie-review.png';
+import TomIcon from '../public/review-icons/tom-review.png';
+import DeannaIcon from '../public/review-icons/deanna-review.png';
 
 export default function Page() {
   return (
@@ -12,8 +20,7 @@ export default function Page() {
           backgroundColor: 'white',
           marginLeft: 50,
           marginRight: 50,
-          borderRadius: 25,
-          //   padding: 50,
+          borderRadius: 10,
 
           display: 'flex',
           flexDirection: 'column',
@@ -21,19 +28,19 @@ export default function Page() {
           alignItems: 'center',
         }}
       >
-        <h2 className={styles.center_text} style={{ marginTop: 50 }}>
+        <h3 className={styles.center_text} style={{ marginTop: 50 }}>
           What We Do Best
-        </h2>
+        </h3>
 
         <Card
-          //   image={''}
+          image={RemovalImage}
           title={'Complete Tree Removal'}
           text={
             'You can rely on us to safely and efficiently remove your trees while treating your property with the utmost care!'
           }
         />
         <Card
-          //   image={''}
+          image={PruningImage}
           title={'Tree Pruning'}
           text={
             'Whether cleaning up after years of neglect or yearly pruning, we can redeem your trees to a healthy and safe state in many cases!'
@@ -41,7 +48,7 @@ export default function Page() {
           flipped={true}
         />
         <Card
-          //   image={''}
+          image={AssessmentImage}
           title={'Tree Assessment'}
           text={
             "Fungus, rot, stunted growth or just not sure what is going on? We can come assess, reveal what is going on that you can't see, and make a game plan for restoration or removal."
@@ -56,9 +63,9 @@ export default function Page() {
             alignItems: 'center',
           }}
         >
-          <h1 className={styles.center_text}>
+          <h2 className={styles.center_text}>
             Locally Owned <br /> & Operated
-          </h1>
+          </h2>
           <p>13 Years of Experience</p>
           <p>Fully Insured</p>
           <p>Dedicated to Serving Our Local Community</p>
@@ -72,7 +79,7 @@ export default function Page() {
         <div style={{ height: 50 }} />
 
         <Card
-          //   image={''}
+          image={OwnerImage}
           title={'What Makes Us Different?'}
           text={
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
@@ -89,7 +96,7 @@ export default function Page() {
             alignItems: 'center',
           }}
         >
-          <h1 className={styles.center_text}>What People Are Saying</h1>
+          <h2 className={styles.center_text}>What People Are Saying</h2>
           <p style={{ width: 400, textAlign: 'center' }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
@@ -106,29 +113,34 @@ export default function Page() {
               width: '100%',
             }}
           >
-            <ReviewCard
+            <LittleReviewCard
+              icon={CarrieIcon}
               text={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+                'Very professional team! Speedy and efficient service. Had multiple tress and hanging limbs that needed to be removed, and the job was done by lunchtime! Highly recommend.'
               }
-              name={'John Doe'}
+              name={'Carrie Bailey'}
             />
-            <ReviewCard
+            <LittleReviewCard
+              icon={TomIcon}
               text={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+                'Great service..hardworking guy..reasonable prices..would definitely recommend his services.'
               }
-              name={'John Doe'}
+              name={'Tom McGill'}
             />
-            <ReviewCard
+            <LittleReviewCard
+              icon={DeannaIcon}
               text={
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt'
+                'Always on time. Always very polite. Wonderful to do business with. Very professional and great prices! They cut some trees on our property, it took no time at all, clean up and everything.'
               }
-              name={'John Doe'}
+              name={'Deanna Lingo'}
             />
           </div>
 
           <div style={{ height: 20 }} />
 
-          <a style={{ color: 'var(--med-blue)' }}>See More</a>
+          <a href="/reviews" style={{ color: 'var(--med-blue)' }}>
+            See More
+          </a>
         </div>
 
         <div style={{ height: 100 }} />

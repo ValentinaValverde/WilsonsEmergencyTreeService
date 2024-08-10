@@ -8,17 +8,25 @@
 body {
   padding: 0px;
   margin: 0px;
-  background-color: var(--light-blue);
+  background-color: var(--med-blue);
 }
 
 h1 {
-  font-weight: normal;
-  margin: 0px;
+  margin: 10px;
+  font-size: 75px;
+  font-weight: 450;
 }
 
 h2 {
+  margin: 10px;
+  font-size: 50px;
+  font-weight: 350;
+}
+
+h3 {
+  margin: 10px;
+  font-size: 25px;
   font-weight: normal;
-  margin: 0px;
 }
 
 p {
@@ -32,11 +40,13 @@ button {
   border-radius: 10px;
   padding: 10px 30px;
   transition: 0.5s;
+  font-weight: bold;
 }
 
 button:hover {
   cursor: pointer;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
+  color: var(--dark-blue);
 }
 
 a {

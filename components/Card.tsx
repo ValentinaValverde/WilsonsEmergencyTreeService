@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import PlaceholderImage from '../public/next.svg';
 
 export default function Card({
@@ -7,7 +7,7 @@ export default function Card({
   text,
   flipped = false,
 }: {
-  image?: string;
+  image?: StaticImageData;
   title: string;
   text: string;
   flipped?: boolean;
@@ -31,29 +31,39 @@ export default function Card({
           <Image
             src={image}
             alt="Card Image"
-            width={300}
-            height={300}
-            style={{ borderRadius: 25, marginRight: 200 }}
+            width={400}
+            height={450}
+            style={{
+              borderRadius: 10,
+              marginRight: 100,
+              objectFit: 'cover',
+              backgroundColor: 'black',
+            }}
           />
 
           <div style={{ width: 350 }}>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{text}</p>
           </div>
         </>
       ) : (
         <>
           <div style={{ width: 350, textAlign: 'right' }}>
-            <h1>{title}</h1>
+            <h2>{title}</h2>
             <p>{text}</p>
           </div>
 
           <Image
             src={image}
             alt="Card Image"
-            width={300}
-            height={300}
-            style={{ borderRadius: 25, marginLeft: 200 }}
+            width={400}
+            height={450}
+            style={{
+              borderRadius: 10,
+              marginLeft: 100,
+              objectFit: 'cover',
+              backgroundColor: 'black',
+            }}
           />
         </>
       )}

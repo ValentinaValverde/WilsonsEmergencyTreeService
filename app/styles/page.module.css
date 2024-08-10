@@ -1,3 +1,7 @@
 .navbar_link:hover {
   color: var(--light-blue);
 }
+
+.center_text {
+  text-align: center;
+}

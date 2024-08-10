@@ -1,3 +1,5 @@
+import styles from '../app/styles/page.module.css';
+
 export default function LandingPage() {
   return (
     <div
@@ -10,7 +12,7 @@ export default function LandingPage() {
         alignItems: 'center',
       }}
     >
-      <h1 style={{ textAlign: 'center' }}>
+      <h1 className={styles.center_text}>
         Wilsons Emergency <br />
         Tree Service
       </h1>

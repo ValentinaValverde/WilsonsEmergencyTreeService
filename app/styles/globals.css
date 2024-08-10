@@ -28,3 +28,12 @@ button:hover {
   cursor: pointer;
   background-color: var(--dark-blue);
 }
+
+a {
+  color: white;
+  transition: 0.5s;
+}
+
+a:hover {
+  cursor: pointer;
+}

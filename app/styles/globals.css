@@ -42,6 +42,7 @@ button:hover {
 a {
   color: white;
   transition: 0.5s;
+  text-decoration: none;
 }
 
 a:hover {

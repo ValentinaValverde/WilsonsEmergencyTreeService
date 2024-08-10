@@ -27,9 +27,19 @@ export default function NavBar() {
             width: 400,
           }}
         >
-          <a className={styles.navbar_link}>Photos</a>
-          <a className={styles.navbar_link}>Reviews</a>
-          <a className={styles.navbar_link}>Facebook</a>
+          <a className={styles.navbar_link} href="/photos">
+            Photos
+          </a>
+          <a className={styles.navbar_link} href="/reviews">
+            Reviews
+          </a>
+          <a
+            className={styles.navbar_link}
+            href="https://www.facebook.com/DavidWilsonTreeService/"
+            target="_blank"
+          >
+            Facebook
+          </a>
           <button>Call Now</button>
         </div>
       </div>

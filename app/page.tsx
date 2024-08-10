@@ -6,7 +6,6 @@ import Page from '@/components/Page';
 export default function Home() {
   return (
     <main>
-      <NavBar />
       <LandingPage />
       <Page />
       <Footer />

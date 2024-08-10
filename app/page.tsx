@@ -25,6 +25,7 @@ export default function Home() {
           <h3 className={styles.center_text} style={{ marginTop: 50 }}>
             What We Do Best
           </h3>
+          <div style={{ height: 25 }} />
 
           <Card
             image={RemovalImage}
@@ -64,13 +65,19 @@ export default function Home() {
           }}
         >
           <h2 className={styles.center_text}>But What Makes Us Different?</h2>
-          <p className={styles.center_text}>
+          <p
+            className={styles.center_text}
+            style={{ color: 'var(--med-blue)' }}
+          >
             Well, something something to name a few
           </p>
 
           <Highlights />
 
-          <button style={{ fontSize: 25, width: 500 }}>
+          <button
+            style={{ fontSize: 25, width: 500 }}
+            className={styles.highlight_button}
+          >
             Call Now for a Free Quote
           </button>
         </div>
@@ -100,7 +107,13 @@ export default function Home() {
           }}
         >
           <h2 className={styles.center_text}>What People Are Saying</h2>
-          <p style={{ width: 400, textAlign: 'center' }}>
+          <p
+            style={{
+              width: 400,
+              textAlign: 'center',
+              color: 'var(--med-blue)',
+            }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt
           </p>
@@ -141,7 +154,7 @@ export default function Home() {
 
           <div style={{ height: 20 }} />
 
-          <a href="/reviews" style={{ color: 'var(--med-blue)' }}>
+          <a href="/reviews" className={styles.see_more}>
             See More
           </a>
         </div>

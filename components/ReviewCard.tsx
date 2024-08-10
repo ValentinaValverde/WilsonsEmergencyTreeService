@@ -80,7 +80,7 @@ export function LittleReviewCard({
     <div
       style={{
         // backgroundColor: 'var(--light-blue)',
-        backgroundColor: 'white',
+        backgroundColor: '#f2f2f2',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between',

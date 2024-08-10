@@ -39,15 +39,13 @@ export default function page() {
 
       <div
         style={{
-          marginTop: -50,
           backgroundColor: 'white',
-          marginLeft: 50,
-          marginRight: 50,
-          borderRadius: 10,
+          margin: '-50px 50px',
           padding: 50,
+          paddingBottom: 100,
+          borderRadius: 10,
 
           display: 'flex',
-          // flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
           flexWrap: 'wrap',

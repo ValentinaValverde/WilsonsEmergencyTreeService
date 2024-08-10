@@ -15,15 +15,13 @@ export default function Card({
   return (
     <div
       style={{
+        width: '100%',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         flexWrap: 'wrap',
         marginTop: 20,
         marginBottom: 20,
-
-        width: '100%',
-        // backgroundColor: 'pink',
       }}
     >
       {flipped ? (
@@ -43,16 +41,16 @@ export default function Card({
             }}
           />
 
-          <div style={{ width: 350 }}>
+          <div style={{ width: 375 }}>
             <h2>{title}</h2>
-            <p>{text}</p>
+            <p style={{ color: 'var(--med-blue)' }}>{text}</p>
           </div>
         </>
       ) : (
         <>
-          <div style={{ width: 350, textAlign: 'right' }}>
+          <div style={{ width: 375, textAlign: 'right' }}>
             <h2>{title}</h2>
-            <p>{text}</p>
+            <p style={{ color: 'var(--med-blue)' }}>{text}</p>
           </div>
 
           <Image

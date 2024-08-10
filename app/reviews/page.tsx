@@ -17,11 +17,6 @@ import BackgroundImage from '../../public/general-photos/wilsons-background.jpeg
 export default function page() {
   const imageData = [
     {
-      icon: DestinyIcon,
-      text: 'Fast, great service! Highly recommended!',
-      name: 'Destiny Hollingworth',
-    },
-    {
       icon: CarrieIcon,
       text: 'Very professional team! Speedy and efficient service. Had multiple tress and hanging limbs that needed to be removed, and the job was done by lunchtime! Highly recommend.',
       name: 'Carrie Bailey',
@@ -61,6 +56,11 @@ export default function page() {
       text: 'David recently cut some trees and removed some limbs over our home. He did a great job. Very hard worker. Great price. Thank you David.',
       name: 'Teri Reynolds Wills',
     },
+    {
+      icon: DestinyIcon,
+      text: 'Fast, great service! Highly recommended!',
+      name: 'Destiny Hollingworth',
+    },
   ];
 
   return (
@@ -96,12 +96,11 @@ export default function page() {
 
       <div
         style={{
-          marginTop: -50,
           backgroundColor: 'white',
-          marginLeft: 50,
-          marginRight: 50,
-          borderRadius: 10,
+          margin: '-50px 50px',
           padding: 50,
+          paddingBottom: 100,
+          borderRadius: 10,
 
           display: 'flex',
           justifyContent: 'center',

@@ -40,6 +40,12 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .highlight_card {
+    width: 25%;
+  }
+}
+
 .highlight_card:hover {
   .highlight_icon {
     width: 55px;

@@ -22,21 +22,22 @@ import Image12 from '../../public/general-photos/repel2.png';
 import Image13 from '../../public/general-photos/right-branch-climb.jpg';
 import Image14 from '../../public/general-photos/rot.jpg';
 import Image15 from '../../public/general-photos/saw-dust-smile.png';
-// import Image16 from '../../public/general-photos/saw-dust.jpg';
-// import Image17 from '../../public/general-photos/saw-shoulder.png';
-import Image18 from '../../public/general-photos/shoulder.png';
-import Image19 from '../../public/general-photos/side.png';
-// import Image20 from '../../public/general-photos/tree-helmet.png';
-import Image21 from '../../public/general-photos/wrist.png';
-// import Image22 from '../../public/general-photos/yellow-straps.jpg';
+import Image16 from '../../public/general-photos/shoulder.png';
+import Image17 from '../../public/general-photos/side.png';
+import Image18 from '../../public/general-photos/wrist.png';
 
 // icons
 import LeftArrow from '../../public/icons/arrow-left.svg';
 import RightArrow from '../../public/icons/arrow-right.svg';
 
+import useMediaQuery from '../../components/MediaQuery';
+
 export default function page() {
+  const isDesktop = useMediaQuery('(min-width: 992px)');
+  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 991px)');
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   const [isEnlarged, setIsEnlarged] = useState(false);
-  // const [currentImage, setCurrentImage] = useState<any>();
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const imageData = [
@@ -55,13 +56,9 @@ export default function page() {
     Image13,
     Image14,
     Image15,
-    // Image16,
-    // Image17,
+    Image16,
+    Image17,
     Image18,
-    Image19,
-    // Image20,
-    Image21,
-    // Image22,
   ];
 
   const totalImages = imageData.length;
@@ -143,21 +140,6 @@ export default function page() {
           >
             Exit
           </button>
-
-          {/* <button
-            onClick={() => {
-              handlePrevImage();
-            }}
-          >
-            prev
-          </button>
-          <button
-            onClick={() => {
-              handleNextImage();
-            }}
-          >
-            next
-          </button> */}
         </div>
       ) : null}
 
@@ -207,26 +189,69 @@ export default function page() {
         {imageData.map((item, i) => {
           return (
             <div key={i} className="image-container">
-              <Image
-                src={item}
-                alt={'Gallery Image'}
-                width={300}
-                height={300}
-                style={{
-                  borderRadius: 10,
-                  backgroundColor: 'black',
-                  margin: 5,
-                  objectFit: 'cover',
-                  cursor: 'pointer',
-                }}
-                onClick={() => {
-                  setIsEnlarged(true);
-                  console.log(isEnlarged);
+              {isDesktop && (
+                <Image
+                  src={item}
+                  alt={'Gallery Image'}
+                  width={300}
+                  height={300}
+                  style={{
+                    borderRadius: 10,
+                    backgroundColor: 'black',
+                    margin: 5,
+                    objectFit: 'cover',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setIsEnlarged(true);
+                    console.log(isEnlarged);
 
-                  setCurrentImageIndex(i);
-                  // console.log(currentImage);
-                }}
-              />
+                    setCurrentImageIndex(i);
+                  }}
+                />
+              )}
+              {isTablet && (
+                <Image
+                  src={item}
+                  alt={'Gallery Image'}
+                  width={250}
+                  height={250}
+                  style={{
+                    borderRadius: 10,
+                    backgroundColor: 'black',
+                    margin: 5,
+                    objectFit: 'cover',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setIsEnlarged(true);
+                    console.log(isEnlarged);
+
+                    setCurrentImageIndex(i);
+                  }}
+                />
+              )}
+              {/* {isMobile && (
+                <Image
+                  src={item}
+                  alt={'Gallery Image'}
+                  width={150}
+                  height={150}
+                  style={{
+                    borderRadius: 10,
+                    backgroundColor: 'black',
+                    margin: 5,
+                    objectFit: 'cover',
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => {
+                    setIsEnlarged(true);
+                    console.log(isEnlarged);
+
+                    setCurrentImageIndex(i);
+                  }}
+                />
+              )} */}
             </div>
           );
         })}

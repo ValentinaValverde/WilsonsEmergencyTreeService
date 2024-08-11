@@ -1,4 +1,4 @@
-import { LittleReviewCard } from '@/components/ReviewCard';
+import ReviewCard from '@/components/ReviewCard';
 import styles from '../styles/page.module.css';
 import Image from 'next/image';
 
@@ -110,11 +110,7 @@ export default function page() {
       >
         {imageData.map((item, i) => {
           return (
-            <LittleReviewCard
-              text={item.text}
-              name={item.name}
-              icon={item.icon}
-            />
+            <ReviewCard text={item.text} name={item.name} icon={item.icon} />
           );
         })}
       </div>

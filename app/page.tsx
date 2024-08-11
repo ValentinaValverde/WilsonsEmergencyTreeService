@@ -1,15 +1,21 @@
+import styles from '../app/styles/page.module.css';
+
+// pages & layouts
 import LandingPage from '@/components/LandingPage';
 import PageLayout from '@/components/PageLayout';
 
-import styles from '../app/styles/page.module.css';
+// components
 import Card from '../components/Card';
 import Highlights from '../components/Highlights';
 import { LittleReviewCard } from '../components/ReviewCard';
+
+// images
 import RemovalImage from '../public/general-photos/wrist.png';
 import PruningImage from '../public/general-photos/prune.png';
 import AssessmentImage from '../public/general-photos/rot.jpg';
 import OwnerImage from '../public/general-photos/saw-dust-smile.png';
 
+// icons
 import CarrieIcon from '../public/review-icons/carrie-review.png';
 import TomIcon from '../public/review-icons/tom-review.png';
 import DeannaIcon from '../public/review-icons/deanna-review.png';

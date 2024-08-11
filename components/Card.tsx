@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import PlaceholderImage from '../public/next.svg';
+import PlaceholderImage from '../public/placeholder-img.png';
 
 export default function Card({
   image = PlaceholderImage,

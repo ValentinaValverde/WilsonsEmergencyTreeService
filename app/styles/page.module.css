@@ -33,3 +33,14 @@
   background-color: var(--dark-blue);
   color: white;
 }
+
+.footer_link {
+  font-size: 25px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+
+.footer_link:hover {
+  color: var(--light-blue);
+}

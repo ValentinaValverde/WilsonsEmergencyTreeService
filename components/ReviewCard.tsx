@@ -1,5 +1,5 @@
-import PlaceholderIcon from '../public/next.svg';
-import PlaceholderImage from '../public/vercel.svg';
+import PlaceholderIcon from '../public/placeholder-img.png';
+import PlaceholderImage from '../public/placeholder-img.png';
 import Image, { StaticImageData } from 'next/image';
 import styles from '../app/styles/page.module.css';
 
@@ -71,7 +71,6 @@ export function LittleReviewCard({
   text,
   name,
 }: {
-  image?: StaticImageData;
   icon?: StaticImageData;
   text: string;
   name: string;

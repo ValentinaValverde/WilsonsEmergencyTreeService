@@ -78,11 +78,10 @@ export function LittleReviewCard({
   return (
     <div
       style={{
-        // backgroundColor: 'var(--light-blue)',
-        backgroundColor: '#f2f2f2',
+        backgroundColor: '#f4f4f4',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'flex-start',
         alignItems: 'center',
         padding: 20,
         borderRadius: 10,
@@ -108,16 +107,18 @@ export function LittleReviewCard({
       />
 
       <p
-        style={{ paddingTop: 20, color: 'black' }}
+        style={{
+          color: 'var(--med-blue)',
+          fontFamily: 'Outage',
+          paddingTop: 20,
+        }}
         className={styles.center_text}
       >
-        "{text}"
+        {name}
       </p>
-      <p
-        style={{ color: 'var(--med-blue)', fontSize: 14 }}
-        className={styles.center_text}
-      >
-        ~ {name}
+
+      <p style={{ color: 'black' }} className={styles.center_text}>
+        "{text}"
       </p>
     </div>
   );

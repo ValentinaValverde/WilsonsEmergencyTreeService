@@ -36,9 +36,20 @@ export default function Highlights() {
       {data.map((item, i) => {
         return (
           <div key={i} className={styles.highlight_card}>
-            <Image src={item.icon} alt="Icon" width={50} height={50} />
+            <Image
+              src={item.icon}
+              alt="Icon"
+              width={50}
+              height={50}
+              className={styles.highlight_icon}
+            />
             <div style={{ height: 25 }} />
-            <h3 style={{ textAlign: 'center' }}>{item.text}</h3>
+            <h3
+              style={{ textAlign: 'center' }}
+              className={styles.highlight_text}
+            >
+              {item.text}
+            </h3>
           </div>
         );
       })}

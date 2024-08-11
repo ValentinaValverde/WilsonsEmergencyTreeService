@@ -39,6 +39,16 @@
   }
 }
 
+.footer_icon {
+  margin: 10px;
+  transition: 0.5s;
+}
+
+.footer_icon:hover {
+  cursor: pointer;
+  fill: var(--light-blue);
+}
+
 /* highlights */
 
 .highlight_section {

@@ -93,13 +93,14 @@ export default function Home() {
               </p>
 
               <Highlights />
-
-              <button
-                style={{ fontSize: 25, width: 500 }}
-                className={styles.highlight_button}
-              >
-                Call Now for a Free Quote
-              </button>
+              <a href="tel:+18772288873" target="_blank">
+                <button
+                  style={{ fontSize: 25, width: 500 }}
+                  className={styles.highlight_button}
+                >
+                  Call Now for a Free Quote
+                </button>
+              </a>
             </div>
 
             <div style={{ height: 100 }} />
@@ -201,7 +202,9 @@ export default function Home() {
                 nisi ut aliquip ex ea commodo consequat.
               </p>
               <div style={{ height: 25 }} />
-              <button style={{ fontSize: 25 }}>Call Now</button>
+              <a href="tel:+18772288873" target="_blank">
+                <button style={{ fontSize: 25 }}>Call Now</button>{' '}
+              </a>
             </div>
 
             <div style={{ height: 50 }} />
@@ -268,13 +271,14 @@ export default function Home() {
               </p>
 
               <Highlights />
-
-              <button
-                style={{ fontSize: 25, width: 500 }}
-                className={styles.highlight_button}
-              >
-                Call Now for a Free Quote
-              </button>
+              <a href="tel:+18772288873" target="_blank">
+                <button
+                  style={{ fontSize: 25, width: 500 }}
+                  className={styles.highlight_button}
+                >
+                  Call Now for a Free Quote
+                </button>
+              </a>
             </div>
 
             <div style={{ height: 100 }} />
@@ -382,7 +386,9 @@ export default function Home() {
                 nisi ut aliquip ex ea commodo consequat.
               </p>
               <div style={{ height: 25 }} />
-              <button style={{ fontSize: 25 }}>Call Now</button>
+              <a href="tel:+18772288873" target="_blank">
+                <button style={{ fontSize: 25 }}>Call Now</button>
+              </a>
             </div>
 
             <div style={{ height: 25 }} />
@@ -449,11 +455,12 @@ export default function Home() {
             </p>
 
             <Highlights />
-
-            <button style={{ fontSize: 20, lineHeight: 1.5 }}>
-              Call Now for a <br />
-              Free Quote
-            </button>
+            <a href="tel:+18772288873" target="_blank">
+              <button style={{ fontSize: 20, lineHeight: 1.5 }}>
+                Call Now for a <br />
+                Free Quote
+              </button>
+            </a>
           </div>
 
           <div style={{ height: 100 }} />
@@ -545,7 +552,9 @@ export default function Home() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <div style={{ height: 25 }} />
-            <button style={{ fontSize: 25 }}>Call Now</button>
+            <a href="tel:+18772288873" target="_blank">
+              <button style={{ fontSize: 25 }}>Call Now</button>
+            </a>
           </div>
 
           <div style={{ height: 50 }} />

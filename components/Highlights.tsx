@@ -19,20 +19,7 @@ export default function Highlights() {
   ];
 
   return (
-    <div
-      style={{
-        // backgroundColor: 'var(--light-blue)',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexWrap: 'wrap',
-
-        paddingLeft: 100,
-        paddingRight: 100,
-        gap: 25,
-        padding: 50,
-      }}
-    >
+    <div className={styles.highlight_section}>
       {data.map((item, i) => {
         return (
           <div key={i} className={styles.highlight_card}>

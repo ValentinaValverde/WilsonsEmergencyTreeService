@@ -70,7 +70,10 @@ export function MobileLandingPage() {
         Lorem ipsum dolor sit amet loream ipsum dolor sit amet lorem ipsum.
       </p>
       <div style={{ height: 25 }} />
-      <button>Call Now for a Free Quote</button>
+      <button style={{ fontSize: 20, lineHeight: 1.5 }}>
+        Call Now for a <br />
+        Free Quote
+      </button>
     </div>
   );
 }

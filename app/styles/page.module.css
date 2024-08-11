@@ -26,6 +26,29 @@
   color: var(--light-blue);
 }
 
+@media (max-width: 767px) {
+  .footer_link {
+    pointer-events: none;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+/* highlights */
+
+.highlight_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  padding-left: 100px;
+  padding-right: 100px;
+  gap: 25px;
+  padding: 50px;
+}
+
 .highlight_card {
   display: flex;
   flex-direction: column;
@@ -43,6 +66,28 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .highlight_card {
     width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlight_section {
+    padding: 0px;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .highlight_card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .highlight_text {
+    font-size: 15px;
+  }
+
+  .highlight_card {
+    pointer-events: none;
   }
 }
 

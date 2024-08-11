@@ -347,7 +347,10 @@ export default function Home() {
 
           {/* What We Do Section */}
           <div>
-            <h3 className={styles.center_text} style={{ marginTop: 50 }}>
+            <h3
+              className={styles.center_text}
+              style={{ marginTop: 100, color: 'white' }}
+            >
               What We Do Best
             </h3>
             <div style={{ height: 25 }} />
@@ -398,11 +401,9 @@ export default function Home() {
 
             <Highlights />
 
-            <button
-              style={{ fontSize: 25, width: 500 }}
-              className={styles.highlight_button}
-            >
-              Call Now for a Free Quote
+            <button style={{ fontSize: 20, lineHeight: 1.5 }}>
+              Call Now for a <br />
+              Free Quote
             </button>
           </div>
 
@@ -433,9 +434,9 @@ export default function Home() {
             <h2 className={styles.center_text}>What People Are Saying</h2>
             <p
               style={{
-                width: 400,
+                // width: 400,
                 textAlign: 'center',
-                color: 'var(--med-blue)',
+                color: 'var(--dark-blue)',
               }}
             >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -461,31 +462,21 @@ export default function Home() {
                 name={'Carrie Bailey'}
               />
               <ReviewCard
-                icon={TomIcon}
-                text={
-                  'Great service..hardworking guy..reasonable prices..would definitely recommend his services.'
-                }
-                name={'Tom McGill'}
-              />
-              <ReviewCard
                 icon={DeannaIcon}
                 text={
                   'Always on time. Always very polite. Wonderful to do business with. Very professional and great prices! They cut some trees on our property, it took no time at all, clean up and everything.'
                 }
                 name={'Deanna Lingo'}
               />
-              <ReviewCard
-                icon={TeriIcon}
-                text={
-                  'David recently cut some trees and removed some limbs over our home. He did a great job. Very hard worker. Great price. Thank you David.'
-                }
-                name={'Teri Reynolds Wills'}
-              />
             </div>
 
             <div style={{ height: 20 }} />
 
-            <a href="/reviews" className={styles.see_more}>
+            <a
+              href="/reviews"
+              className={styles.see_more}
+              style={{ color: 'white' }}
+            >
               See More
             </a>
           </div>

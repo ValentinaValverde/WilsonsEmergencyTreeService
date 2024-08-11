@@ -2,6 +2,8 @@ import Image, { StaticImageData } from 'next/image';
 import PlaceholderImage from '../public/placeholder-img.png';
 import styles from '../app/styles/page.module.css';
 
+import useMediaQuery from '../components/MediaQuery';
+
 export default function Card({
   image = PlaceholderImage,
   title,
@@ -83,6 +85,8 @@ export function ResponsiveCard({
   title: string;
   text: string;
 }) {
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   return (
     <div
       style={{
@@ -110,11 +114,27 @@ export function ResponsiveCard({
       <div style={{ height: 50 }} />
 
       <h2 className={styles.center_text}>{title}</h2>
-      <p
-        style={{ color: 'var(--med-blue)', textAlign: 'center', width: '75%' }}
-      >
-        {text}
-      </p>
+      {isMobile ? (
+        <p
+          style={{
+            color: 'var(--dark-blue)',
+            textAlign: 'center',
+            width: '75%',
+          }}
+        >
+          {text}
+        </p>
+      ) : (
+        <p
+          style={{
+            color: 'var(--med-blue)',
+            textAlign: 'center',
+            width: '75%',
+          }}
+        >
+          {text}
+        </p>
+      )}
     </div>
   );
 }

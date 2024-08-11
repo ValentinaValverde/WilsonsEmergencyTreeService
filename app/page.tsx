@@ -75,7 +75,7 @@ export default function Home() {
             className={styles.center_text}
             style={{ color: 'var(--med-blue)' }}
           >
-            Well, something something to name a few
+            Need a good reason? Well here's a few:
           </p>
 
           <Highlights />

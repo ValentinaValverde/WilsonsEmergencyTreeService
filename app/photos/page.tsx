@@ -1,3 +1,6 @@
+'use client';
+
+import React, { useState } from 'react';
 import styles from '../styles/page.module.css';
 import Image from 'next/image';
 
@@ -19,15 +22,23 @@ import Image12 from '../../public/general-photos/repel2.png';
 import Image13 from '../../public/general-photos/right-branch-climb.jpg';
 import Image14 from '../../public/general-photos/rot.jpg';
 import Image15 from '../../public/general-photos/saw-dust-smile.png';
-import Image16 from '../../public/general-photos/saw-dust.jpg';
-import Image17 from '../../public/general-photos/saw-shoulder.png';
+// import Image16 from '../../public/general-photos/saw-dust.jpg';
+// import Image17 from '../../public/general-photos/saw-shoulder.png';
 import Image18 from '../../public/general-photos/shoulder.png';
 import Image19 from '../../public/general-photos/side.png';
-import Image20 from '../../public/general-photos/tree-helmet.png';
+// import Image20 from '../../public/general-photos/tree-helmet.png';
 import Image21 from '../../public/general-photos/wrist.png';
-import Image22 from '../../public/general-photos/yellow-straps.jpg';
+// import Image22 from '../../public/general-photos/yellow-straps.jpg';
+
+// icons
+import LeftArrow from '../../public/icons/arrow-left.svg';
+import RightArrow from '../../public/icons/arrow-right.svg';
 
 export default function page() {
+  const [isEnlarged, setIsEnlarged] = useState(false);
+  // const [currentImage, setCurrentImage] = useState<any>();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
   const imageData = [
     Image1,
     Image2,
@@ -53,8 +64,103 @@ export default function page() {
     // Image22,
   ];
 
+  const totalImages = imageData.length;
+
+  const handlePrevImage = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? totalImages - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNextImage = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
+  };
+
   return (
     <>
+      {isEnlarged ? (
+        <div
+          style={{
+            width: '100%',
+            height: '100vh',
+            backgroundColor: 'rgba(0, 0, 0, 0.75)',
+            zIndex: 100,
+            position: 'fixed',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              src={LeftArrow}
+              alt="Left Arrow"
+              width={24}
+              height={24}
+              onClick={() => {
+                handlePrevImage();
+              }}
+              style={{ cursor: 'pointer' }}
+            />
+
+            <Image
+              src={imageData[currentImageIndex]}
+              alt="Image"
+              width={500}
+              height={500}
+              style={{
+                borderRadius: 10,
+                objectFit: 'cover',
+                maxWidth: '90%',
+                marginLeft: 10,
+                marginRight: 10,
+              }}
+            />
+
+            <Image
+              src={RightArrow}
+              alt="Right Arrow"
+              width={24}
+              height={24}
+              onClick={() => {
+                handleNextImage();
+              }}
+              style={{ cursor: 'pointer' }}
+            />
+          </div>
+          <div style={{ height: 25 }} />
+          <button
+            onClick={() => {
+              setIsEnlarged(false);
+            }}
+          >
+            Exit
+          </button>
+
+          {/* <button
+            onClick={() => {
+              handlePrevImage();
+            }}
+          >
+            prev
+          </button>
+          <button
+            onClick={() => {
+              handleNextImage();
+            }}
+          >
+            next
+          </button> */}
+        </div>
+      ) : null}
+
       <div
         style={{
           height: '50vh',
@@ -100,19 +206,28 @@ export default function page() {
       >
         {imageData.map((item, i) => {
           return (
-            <Image
-              src={item}
-              alt={'Gallery Image'}
-              width={300}
-              height={300}
-              style={{
-                borderRadius: 10,
-                backgroundColor: 'black',
-                margin: 5,
-                objectFit: 'cover',
-              }}
-              key={i}
-            />
+            <div key={i} className="image-container">
+              <Image
+                src={item}
+                alt={'Gallery Image'}
+                width={300}
+                height={300}
+                style={{
+                  borderRadius: 10,
+                  backgroundColor: 'black',
+                  margin: 5,
+                  objectFit: 'cover',
+                  cursor: 'pointer',
+                }}
+                onClick={() => {
+                  setIsEnlarged(true);
+                  console.log(isEnlarged);
+
+                  setCurrentImageIndex(i);
+                  // console.log(currentImage);
+                }}
+              />
+            </div>
           );
         })}
       </div>

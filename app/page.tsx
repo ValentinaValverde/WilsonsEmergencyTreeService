@@ -183,6 +183,7 @@ export default function Home() {
           </PageLayout>
         </>
       )}
+
       {isTablet && (
         <>
           <LandingPage />
@@ -261,7 +262,6 @@ export default function Home() {
                 text={
                   'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
                 }
-                // flipped={true}
               />
             </div>
 
@@ -298,7 +298,6 @@ export default function Home() {
                   width: '100%',
                 }}
               >
-                {/* HERE HERE HERE */}
                 <ReviewCard
                   icon={CarrieIcon}
                   text={
@@ -417,7 +416,6 @@ export default function Home() {
               text={
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
               }
-              // flipped={true}
             />
           </div>
 
@@ -434,7 +432,6 @@ export default function Home() {
             <h2 className={styles.center_text}>What People Are Saying</h2>
             <p
               style={{
-                // width: 400,
                 textAlign: 'center',
                 color: 'var(--dark-blue)',
               }}

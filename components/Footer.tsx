@@ -7,8 +7,6 @@ import Image from 'next/image';
 import useMediaQuery from '../components/MediaQuery';
 
 export default function Footer() {
-  // const isDesktop = useMediaQuery('(min-width: 992px)');
-  // const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 991px)');
   const isMobile = useMediaQuery('(max-width: 767px)');
 
   return (

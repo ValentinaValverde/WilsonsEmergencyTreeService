@@ -28,7 +28,6 @@
 
 @media (max-width: 767px) {
   .footer_link {
-    pointer-events: none;
     font-size: 20px;
     margin-top: 10px;
     margin-bottom: 10px;

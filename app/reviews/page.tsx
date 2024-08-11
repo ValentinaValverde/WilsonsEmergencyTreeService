@@ -1,4 +1,6 @@
-import { LittleReviewCard } from '@/components/ReviewCard';
+'use client';
+
+import ReviewCard from '@/components/ReviewCard';
 import styles from '../styles/page.module.css';
 import Image from 'next/image';
 
@@ -14,7 +16,11 @@ import TeriIcon from '../../public/review-icons/teri-review.png';
 
 import BackgroundImage from '../../public/general-photos/wilsons-background.jpeg';
 
+import useMediaQuery from '../../components/MediaQuery';
+
 export default function page() {
+  const isMobile = useMediaQuery('(max-width: 767px)');
+
   const imageData = [
     {
       icon: CarrieIcon,
@@ -65,59 +71,114 @@ export default function page() {
 
   return (
     <>
-      <div
-        style={{
-          height: '50vh',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Image
-          src={BackgroundImage}
-          alt="Wilson's Emergency Tree Service Background"
-          layout="fill"
-          objectFit="cover"
-          style={{
-            filter: 'brightness(60%)',
-            zIndex: -1,
-            maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 80%, transparent)',
-          }}
-        />
-        <h2
-          className={styles.center_text}
-          style={{ color: 'white', marginTop: 50 }}
-        >
-          Reviews
-        </h2>
-        <p style={{ color: 'white' }}>What folks are saying about us.</p>
-      </div>
-
-      <div
-        style={{
-          backgroundColor: 'white',
-          margin: '-50px 50px',
-          padding: 50,
-          paddingBottom: 100,
-          borderRadius: 10,
-
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-        }}
-      >
-        {imageData.map((item, i) => {
-          return (
-            <LittleReviewCard
-              text={item.text}
-              name={item.name}
-              icon={item.icon}
+      {isMobile ? (
+        <>
+          <div
+            style={{
+              height: '50vh',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              src={BackgroundImage}
+              alt="Wilson's Emergency Tree Service Background"
+              layout="fill"
+              objectFit="cover"
+              style={{
+                filter: 'brightness(60%)',
+                zIndex: -1,
+                maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 80%, transparent)',
+              }}
             />
-          );
-        })}
-      </div>
+            <h2
+              className={styles.center_text}
+              style={{ color: 'white', marginTop: 50 }}
+            >
+              Reviews
+            </h2>
+            <p style={{ color: 'white' }}>What folks are saying about us.</p>
+          </div>
+          <div
+            style={{
+              backgroundColor: 'white',
+              background:
+                'linear-gradient(0deg, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            {imageData.map((item, i) => {
+              return (
+                <ReviewCard
+                  text={item.text}
+                  name={item.name}
+                  icon={item.icon}
+                />
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <>
+          <div
+            style={{
+              height: '50vh',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <Image
+              src={BackgroundImage}
+              alt="Wilson's Emergency Tree Service Background"
+              layout="fill"
+              objectFit="cover"
+              style={{
+                filter: 'brightness(60%)',
+                zIndex: -1,
+                maskImage: 'linear-gradient(rgba(0, 0, 0, 1) 80%, transparent)',
+              }}
+            />
+            <h2
+              className={styles.center_text}
+              style={{ color: 'white', marginTop: 50 }}
+            >
+              Reviews
+            </h2>
+            <p style={{ color: 'white' }}>What folks are saying about us.</p>
+          </div>
+          <div
+            style={{
+              backgroundColor: 'white',
+              margin: '-50px 50px',
+              padding: 50,
+              paddingBottom: 100,
+              borderRadius: 10,
+
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              flexWrap: 'wrap',
+            }}
+          >
+            {imageData.map((item, i) => {
+              return (
+                <ReviewCard
+                  text={item.text}
+                  name={item.name}
+                  icon={item.icon}
+                />
+              );
+            })}
+          </div>
+        </>
+      )}
     </>
   );
 }

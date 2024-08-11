@@ -134,8 +134,7 @@ export default function Home() {
                   color: 'var(--med-blue)',
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
+                We value our customers, and it shows!
               </p>
 
               <div style={{ height: 20 }} />
@@ -179,7 +178,33 @@ export default function Home() {
               </a>
             </div>
 
-            <div style={{ height: 100 }} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+                padding: 50,
+                marginTop: 100,
+                marginBottom: 100,
+              }}
+            >
+              <h2>
+                Don't wait, schedule <br />
+                your Free Quote Today!
+              </h2>
+              <p style={{ width: 650 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div style={{ height: 25 }} />
+              <button style={{ fontSize: 25 }}>Call Now</button>
+            </div>
+
+            <div style={{ height: 50 }} />
           </PageLayout>
         </>
       )}
@@ -283,8 +308,7 @@ export default function Home() {
                   color: 'var(--med-blue)',
                 }}
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt
+                We value our customers, and it shows!
               </p>
 
               <div style={{ height: 20 }} />
@@ -335,7 +359,33 @@ export default function Home() {
               </a>
             </div>
 
-            <div style={{ height: 100 }} />
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                textAlign: 'center',
+                padding: 50,
+                marginTop: 100,
+                marginBottom: 50,
+              }}
+            >
+              <h2>
+                Don't wait, schedule <br />
+                your Free Quote Today!
+              </h2>
+              <p style={{ width: 650 }}>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div style={{ height: 25 }} />
+              <button style={{ fontSize: 25 }}>Call Now</button>
+            </div>
+
+            <div style={{ height: 25 }} />
           </PageLayout>
         </>
       )}
@@ -436,8 +486,7 @@ export default function Home() {
                 color: 'var(--dark-blue)',
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt
+              We value our customers, and it shows!
             </p>
 
             <div style={{ height: 20 }} />
@@ -478,7 +527,28 @@ export default function Home() {
             </a>
           </div>
 
-          <div style={{ height: 100 }} />
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              textAlign: 'center',
+              padding: 50,
+              marginTop: 50,
+              // marginBottom: 50,
+            }}
+          >
+            <h3 style={{ color: 'white' }}>Don't wait</h3>
+            <h2 style={{ fontSize: 35 }}>schedule your Free Quote Today!</h2>
+            <p style={{ width: '80%', color: 'var(--dark-blue)' }}>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div style={{ height: 25 }} />
+            <button style={{ fontSize: 25 }}>Call Now</button>
+          </div>
+
+          <div style={{ height: 50 }} />
         </>
       )}
     </main>

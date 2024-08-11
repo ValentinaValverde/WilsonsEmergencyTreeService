@@ -144,7 +144,12 @@ export default function NavBar() {
                     Facebook
                   </a>
                   <div style={{ height: 50 }} />
-                  <button style={{ fontSize: 20 }}>Call Now</button>
+                  <button
+                    style={{ fontSize: 20 }}
+                    className={styles.navbar_modal_button}
+                  >
+                    Call Now
+                  </button>
                 </div>
               </div>
             </>

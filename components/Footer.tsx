@@ -54,7 +54,9 @@ export default function Footer() {
               <div style={{ height: 25 }} />
             </div>
           </div>
-          <button style={{ fontSize: 16 }}>Call Now for a Free Quote!</button>
+          <button style={{ fontSize: 16, width: '100%' }}>
+            Call Now for a Free Quote!
+          </button>
         </div>
       ) : (
         <div

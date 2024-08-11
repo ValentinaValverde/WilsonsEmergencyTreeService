@@ -2,6 +2,11 @@
   color: var(--light-blue);
 }
 
+.navbar_modal_button:hover {
+  background-color: var(--dark-blue);
+  color: white;
+}
+
 .center_text {
   text-align: center;
 }

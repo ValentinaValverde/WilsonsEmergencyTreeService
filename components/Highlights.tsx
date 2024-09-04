@@ -10,19 +10,19 @@ import PlusIcon from '../public/icons/plus.svg';
 
 export default function Highlights() {
   const data = [
-    { icon: CalendarIcon, text: 'Precision Scheduling' },
-    { icon: StarIcon, text: 'Oustanding Results' },
-    { icon: SatisfiedIcon, text: 'Happy Customers' },
-    { icon: PlusIcon, text: '13+ Years of Experience' },
-    { icon: ShieldIcon, text: 'Fully Insured' },
-    { icon: HeartIcon, text: 'Community-Focused Service' },
+    { icon: CalendarIcon, text: 'Precision Scheduling', link: '/' },
+    { icon: StarIcon, text: 'Oustanding Results', link: '/photos' },
+    { icon: SatisfiedIcon, text: 'Happy Customers', link: '/reviews' },
+    { icon: PlusIcon, text: '13+ Years of Experience', link: '/' },
+    { icon: ShieldIcon, text: 'Fully Insured', link: '/' },
+    { icon: HeartIcon, text: 'Community-Focused Service', link: '/' },
   ];
 
   return (
     <div className={styles.highlight_section}>
       {data.map((item, i) => {
         return (
-          <div key={i} className={styles.highlight_card}>
+          <a key={i} className={styles.highlight_card} href={item.link}>
             <Image
               src={item.icon}
               alt="Icon"
@@ -37,7 +37,7 @@ export default function Highlights() {
             >
               {item.text}
             </h3>
-          </div>
+          </a>
         );
       })}
     </div>

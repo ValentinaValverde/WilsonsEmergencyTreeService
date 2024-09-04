@@ -41,7 +41,7 @@ export default function NavBar() {
               }}
             >
               <a href="/">
-                <Image src={Logo} alt="Logo" width={70} height={60} />
+                <Image src={Logo} alt="Logo" width={100} height={90} />
               </a>
               <div className="navbar-container">
                 <svg
@@ -176,7 +176,7 @@ export default function NavBar() {
             }}
           >
             <a href="/">
-              <Image src={Logo} alt="Logo" width={70} height={60} />
+              <Image src={Logo} alt="Logo" width={115} height={100} />
             </a>
 
             <div

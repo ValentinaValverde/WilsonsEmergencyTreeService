@@ -3,6 +3,12 @@
   src: local('Outage'), url(../assets/fonts/Outage.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: 'Argon';
+  src: local('Argon'),
+    url(../assets/fonts/Argon_Regular1.otf) format('opentype');
+}
+
 :root {
   --red: #b42531;
   --dark-blue: #253452;
@@ -40,6 +46,7 @@ h3 {
 
 p {
   margin: 5px;
+  font-family: 'Argon';
 }
 
 button {

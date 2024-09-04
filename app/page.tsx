@@ -46,11 +46,17 @@ export default function Home() {
               <div style={{ height: 25 }} />
 
               <Card
+                image={PruningImage}
+                title={'Emergency Serivce'}
+                text={'Lorem ipsum dolor sit amet'}
+              />
+              <Card
                 image={RemovalImage}
                 title={'Complete Tree Removal'}
                 text={
                   'You can rely on us to safely and efficiently remove your trees while treating your property with the utmost care!'
                 }
+                flipped={true}
               />
               <Card
                 image={PruningImage}
@@ -58,7 +64,6 @@ export default function Home() {
                 text={
                   'Whether cleaning up after years of neglect or yearly pruning, we can redeem your trees to a healthy and safe state in many cases!'
                 }
-                flipped={true}
               />
               <Card
                 image={AssessmentImage}
@@ -66,6 +71,7 @@ export default function Home() {
                 text={
                   "Fungus, rot, stunted growth or just not sure what is going on? We can come assess, reveal what is going on that you can't see, and make a game plan for restoration or removal."
                 }
+                flipped={true}
               />
             </div>
 
@@ -224,6 +230,11 @@ export default function Home() {
               </h3>
               <div style={{ height: 25 }} />
 
+              <ResponsiveCard
+                image={PruningImage}
+                title={'Emergency Serivce'}
+                text={'Lorem ipsum dolor sit amet'}
+              />
               <ResponsiveCard
                 image={RemovalImage}
                 title={'Complete Tree Removal'}
@@ -410,6 +421,11 @@ export default function Home() {
             </h3>
             <div style={{ height: 25 }} />
 
+            <ResponsiveCard
+              image={RemovalImage}
+              title={'Emergency Service'}
+              text={'Lorem ipsum dolor sit amet'}
+            />
             <ResponsiveCard
               image={RemovalImage}
               title={'Complete Tree Removal'}

@@ -86,6 +86,7 @@ export default function Home() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
+                width: '100%',
               }}
             >
               <h2 className={styles.center_text}>
